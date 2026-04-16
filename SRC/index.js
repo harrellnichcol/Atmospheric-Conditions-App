@@ -59,7 +59,7 @@ function formatDate(date) {
     seconds = `0${seconds}`;
   }
 
-  return `${dayOfWeek}, ${month} ${dayOfMonth}, ${year} ${hours}:${minutes}:${seconds}`;
+  return `${day}, ${month} ${dayOfMonth}, ${year} ${hours}:${minutes}:${seconds}`;
 }
 
 function searchCity(city) {
