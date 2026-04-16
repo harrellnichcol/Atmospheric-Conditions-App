@@ -32,18 +32,24 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  let dayOfMonth = date.getDate(); 
-  let year = date.getFullYear();  
-  
-  let months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  let month = months[date.getMonth()]; // Returns month name
-  // ---------------------
+  let dayOfMonth = date.getDate();
+  let year = date.getFullYear();
 
-  return `${dayOfWeek}, ${month} ${dayOfMonth}, ${year}`;
-}
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -53,7 +59,7 @@ function formatDate(date) {
     seconds = `0${seconds}`;
   }
 
-  return `${day} ${hours}:${minutes}:${seconds}`;
+  return `${dayOfWeek}, ${month} ${dayOfMonth}, ${year} ${hours}:${minutes}:${seconds}`;
 }
 
 function searchCity(city) {
