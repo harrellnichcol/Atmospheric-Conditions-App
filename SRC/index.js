@@ -32,6 +32,18 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+  let dayOfMonth = date.getDate(); 
+  let year = date.getFullYear();  
+  
+  let months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  let month = months[date.getMonth()]; // Returns month name
+  // ---------------------
+
+  return `${dayOfWeek}, ${month} ${dayOfMonth}, ${year}`;
+}
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
