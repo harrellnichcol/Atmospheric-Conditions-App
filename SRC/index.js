@@ -9,7 +9,7 @@ function refreshWeather(response) {
 
 function searchCity(city) {
   let apiKey = "3ed75b5a3c03atf2beaa90eb081934of";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`; // Fixed variable name
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(refreshWeather);
 }
 
@@ -22,3 +22,5 @@ function handleSearchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Shepherd");
